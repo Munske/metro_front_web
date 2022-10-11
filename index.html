@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/jpg" href="img/icon/metro.ico" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <script defer src="/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/163d253e55.js" crossorigin="anonymous"></script>
+
+    <title>Metro</title>
+</head>
+
+<body>
+    <header id="cabecalho">
+
+        <audio id="som_metro_andando" src="../audio/efeito_metro_andando.mp3"></audio>
+        <audio id="som_chegada_vagao" src="../audio/efeito_chegada_vagao.mp3"></audio>
+        <audio id="som_porta_abre_fecha" src="../audio/efieto_porta_abre_fecha.mp3"></audio>
+        <audio id="som_ambiente" src="../audio/efeito_ambiente.mp3" loop></audio>
+
+        <ol id="lista_nuvens">
+            <ul>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+            </ul>
+            <ul>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+            </ul>
+            <ul>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+            </ul>
+            <ul>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+                <ol></ol>
+            </ul>
+        </ol>
+    </header>
+    <main id="principal">
+        <section id="metro">
+            <section id="v1" class="vagao">
+                <section id="v1_esquerda">
+                    <div id="janela_maquinista"></div>
+                    <div id="farol_esquerda"></div>
+                </section>
+                <section id="v1_direita">
+                    <section class="informacao_vagao">
+                        <ul>
+                            <li><a class="btn_vagao_atual" onclick="muda_vagao(1,1)">1</a></li>
+                            <li><a onclick="muda_vagao(1,2)">2</a></li>
+                            <li><a onclick="muda_vagao(1,3)">3</a></li>
+                            <li><a onclick="muda_vagao(1,4)">4</a></li>
+                            <li><a onclick="muda_vagao(1,5)">5</a></li>
+                            <i onclick="muda_vagao(1,2)" class="setas fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                        </ul>
+                    </section>
+                    <section class="porta">
+                        <div class="div_porta"></div>
+                        <button class="btn_conteudo"><a href=""><i class="fa-solid fa-house-chimney">
+                                    HOME</i></a></button>
+                        <div class="div_porta"></div>
+                    </section>
+                </section>
+            </section>
+            <div class="vao"></div>
+            <section id="v2" class="vagao">
+                <section class="janela"></section>
+                <section class="vagao_meio">
+                    <section class="informacao_vagao">
+                        <ul>
+                            <i onclick="muda_vagao(2,1)" class="setas fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                            <li><a onclick="muda_vagao(2,1)">1</a></li>
+                            <li><a class="btn_vagao_atual" onclick="muda_vagao(2,2)">2</a></li>
+                            <li><a onclick="muda_vagao(2,3)">3</a></li>
+                            <li><a onclick="muda_vagao(2,4)">4</a></li>
+                            <li><a onclick="muda_vagao(2,5)">5</a></li>
+                            <i onclick="muda_vagao(2,3)" class="setas fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                        </ul>
+                    </section>
+                    <section class="porta">
+                        <div class="div_porta"></div>
+                        <div class="div_porta"></div>
+                    </section>
+                </section>
+                <section class="janela"></section>
+            </section>
+            <div class="vao"></div>
+            <section id="v3" class="vagao">
+                <section class="janela"></section>
+                <section class="vagao_meio">
+                    <section class="informacao_vagao">
+                        <ul>
+                            <i onclick="muda_vagao(3,2)" class="setas fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                            <li><a onclick="muda_vagao(3,1)">1</a></li>
+                            <li><a onclick="muda_vagao(3,2)">2</a></li>
+                            <li><a class="btn_vagao_atual" onclick="muda_vagao(3,3)">3</a></li>
+                            <li><a onclick="muda_vagao(3,4)">4</a></li>
+                            <li><a onclick="muda_vagao(3,5)">5</a></li>
+                            <i onclick="muda_vagao(3,4)" class="setas fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                        </ul>
+                    </section>
+                    <section class="porta">
+                        <div class="div_porta"></div>
+                        <div class="div_porta"></div>
+                    </section>
+                </section>
+                <section class="janela"></section>
+            </section>
+            <div class="vao"></div>
+            <section id="v4" class="vagao">
+                <section class="janela"></section>
+                <section class="vagao_meio">
+                    <section class="informacao_vagao">
+                        <ul>
+                            <i onclick="muda_vagao(4,3)" class="setas fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                            <li><a onclick="muda_vagao(4,1)">1</a></li>
+                            <li><a onclick="muda_vagao(4,2)">2</a></li>
+                            <li><a onclick="muda_vagao(4,3)">3</a></li>
+                            <li><a class="btn_vagao_atual" onclick="muda_vagao(4,4)">4</a></li>
+                            <li><a onclick="muda_vagao(4,5)">5</a></li>
+                            <i onclick="muda_vagao(4,5)" class="setas fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+                        </ul>
+                    </section>
+                    <section class="porta">
+                        <div class="div_porta"></div>
+                        <div class="div_porta"></div>
+                    </section>
+                </section>
+                <section class="janela"></section>
+            </section>
+            <div class="vao"></div>
+            <section id="v6" class="vagao">
+                <section id="v6_esquerda">
+                    <section class="informacao_vagao">
+                        <ul>
+                            <i onclick="muda_vagao(5,4)" class="setas fa fa-arrow-left fa-lg" aria-hidden="true"></i>
+                            <li><a onclick="muda_vagao(5,1)">1</a></li>
+                            <li><a onclick="muda_vagao(5,2)">2</a></li>
+                            <li><a onclick="muda_vagao(5,3)">3</a></li>
+                            <li><a onclick="muda_vagao(5,4)">4</a></li>
+                            <li><a class="btn_vagao_atual" onclick="muda_vagao(5,5)">5</a></li>
+                        </ul>
+                    </section>
+                    <section class="porta">
+                        <div class="div_porta"></div>
+                        <div class="div_porta"></div>
+                    </section>
+                </section>
+                <section id="v6_direita">
+                    <div id="janela_fundo"></div>
+                    <div id="farol_direita"></div>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer id="rodape"></footer>
+</body>
+
+</html>

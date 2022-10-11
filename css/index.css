@@ -1,0 +1,499 @@
+@charset "utf-8";
+
+/* 320x480 */
+:root {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/metro/muro_grafite.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cabecalho {
+    width: 100vw;
+    height: 40%;
+}
+
+#lista_nuvens {
+    width: 120vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#lista_nuvens ul {
+    width: 50%;
+    height: 15%;
+    display: flex;
+    animation: pulsar_nuvem 10s infinite linear;
+}
+
+@keyframes pulsar_nuvem {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#lista_nuvens ul:nth-child(1), #lista_nuvens ul:nth-child(3) {
+    margin-top: 80px;
+}
+
+#lista_nuvens ul:nth-child(2), #lista_nuvens ul:nth-child(4){
+    margin-top: 20px;
+}
+
+
+#lista_nuvens ul ol {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+#lista_nuvens ul ol:nth-child(1) {
+    left: 15px;
+}
+
+#lista_nuvens ul ol:nth-child(2) {
+    left: 8px;
+    top: 3px;
+}
+
+#lista_nuvens ul ol:nth-child(3) {
+    top: -2px;
+}
+
+#lista_nuvens ul ol:nth-child(4) {
+    right: 8px;
+    top: 3px;
+}
+
+#lista_nuvens ul ol:nth-child(5) {
+    right: 15px;
+}
+
+#principal {
+    width: 100vw;
+    height: 50%;
+}
+
+#metro {
+    width: 500vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    /*animation: recebe do JS o mudar_vagao*/
+}
+
+.vagao {
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(rgb(80, 1, 1), rgb(111, 2, 2), rgb(62, 62, 62));
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.vagao_meio{
+    width: 80%;
+    height: 100%;
+}
+
+#v1{
+    border-radius: 60% 30px 0 20%;
+}
+
+#v6{
+    border-radius: 30px 60% 20% 0;
+}
+
+#v1, #v6{
+    display: flex;
+    align-items: flex-end;
+}
+
+#v2,#v3,#v4,#v5 {
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 0 10px;
+}
+
+.vao {
+    width: 10px;
+    height: 60%;
+    background-color: black;
+    border: solid 2px black;
+}
+
+#v1_esquerda, #v6_direita{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#v6_direita{
+    justify-content: flex-start;
+}
+
+#v1_direita, #v6_esquerda{
+    width: 60%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+#janela_maquinista, #janela_fundo {
+    width: 80%;
+    height: 40%;
+    margin: 40px 0 0 0;
+    border-radius: 100% 10px 10px 10px;
+    background-image: linear-gradient(330deg, gray, white);
+    border: solid 3px black;
+}
+
+#janela_fundo {
+    border-radius: 10px 100% 10px 10px;
+}
+
+.informacao_vagao {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2px 5px;
+}
+
+.informacao_vagao ul {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.informacao_vagao ul li {
+    width: 12%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.532);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.541);
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.informacao_vagao ul li:hover {
+    transform: scale(1.2);
+}
+
+.informacao_vagao ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_vagao_atual
+{
+    border-radius: 50%;
+    color: white;
+    background-color: green;
+    animation: pulsaIndicadorVagao 2s linear infinite;
+}
+
+@keyframes pulsaIndicadorVagao{
+    0%{
+        box-shadow: 0px 0px 0px 0px green;
+    }
+    50%{
+        box-shadow: 1px 1px 20px 4px green;
+    }
+    100%{
+        box-shadow: 0px 0px 0px 0px green;
+    }
+}
+
+.setas{
+    color: rgba(158, 149, 149, 0.758);
+}
+
+.setas:hover{
+    cursor: pointer;
+}
+
+.setas:hover {
+    transform: scale(1.5);
+}
+
+.porta {
+    width: 100%;
+    height: 70%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.div_porta{
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    background-image: linear-gradient(rgb(80, 1, 1), rgb(111, 2, 2), rgb(62, 62, 62));
+    transition: 2s;
+    z-index: 2;
+}
+
+.porta_aberta{
+    width: 10%;
+    transition: 3s;
+}
+
+.btn_conteudo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.212);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.btn_conteudo a{
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.janela{
+    width: 10%;
+    height: 60%;
+    border: solid 5px black;
+    border-radius: 30px;
+    background-image: linear-gradient(white, gray);
+}
+
+#rodape {
+    width: 100vw;
+    height: 10%;
+    border-top: 5px solid black;
+    background-image: url(/img/metro/piso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 768x1024 */
+@media screen and (min-width: 768px) {
+
+    #cabecalho {
+        height: 32%;
+    }
+
+    #lista_nuvens ul {
+        height: 20%;
+    }
+    
+    #lista_nuvens ul:nth-child(1), #lista_nuvens ul:nth-child(3) {
+        margin-top: 110px;
+    }
+    
+    #lista_nuvens ul:nth-child(2), #lista_nuvens ul:nth-child(4){
+        margin-top: 30px;
+    }
+
+    #lista_nuvens ul ol:nth-child(1) {
+        left: 25px;
+    }
+    
+    #lista_nuvens ul ol:nth-child(2) {
+        left: 15px;
+    }
+
+    #lista_nuvens ul ol:nth-child(4) {
+        right: 15px;
+    }
+    
+    #lista_nuvens ul ol:nth-child(5) {
+        right: 25px;
+    }
+    
+    #principal {
+        height: 50%;
+    }
+
+    .vagao {
+        width: 98.7vw;
+    }
+
+    .vagao_meio{
+        width: 50%;
+        height: 100%;
+    }
+
+    #janela_maquinista, #janela_fundo{
+        margin: 60px 0 0 0;
+    }
+
+    #v1_direita, #v6_esquerda{
+        padding: 0 50px;
+    }
+
+    .informacao_vagao ul {
+        height: 100%;
+    }
+    
+    .informacao_vagao ul li {
+        height: 40%;
+        font-size: 2em;
+    }
+
+    .janela{
+        width: 25%;
+        height: 40%;
+    }
+
+    #rodape {
+        height: 18%;
+    }
+}
+/* 1024x637 */
+@media screen and (min-width: 1024px) {
+    #janela_maquinista, #janela_fundo{
+        margin: 50px 30px 0 0;
+    }
+}
+/* 1280x720 */
+@media screen and (min-width: 1280px) {
+    
+    #cabecalho {
+        height: 20%;
+    }
+
+    #lista_nuvens {
+        width: 100vw;
+    }
+
+    #lista_nuvens ul {
+        height: 30%;
+    }
+    
+    #lista_nuvens ul:nth-child(1), #lista_nuvens ul:nth-child(3) {
+        margin-top: 70px;
+    }
+
+
+    #lista_nuvens ul ol:nth-child(1) {
+        left: 50px;
+    }
+    
+    #lista_nuvens ul ol:nth-child(2) {
+        left: 30px;
+    }
+
+    #lista_nuvens ul ol:nth-child(4) {
+        right: 30px;
+    }
+    
+    #lista_nuvens ul ol:nth-child(5) {
+        right: 50px;
+    }
+    
+    #principal {
+        height: 60%;
+    }
+
+    .vagao {
+        width: 99vw;
+        gap: 30px;
+    }
+
+    .vagao_meio{
+        width: 40%;
+        height: 100%;
+    }
+
+    #janela_maquinista{
+        margin: 80px 50px 0 0;
+    }
+
+    #janela_fundo{
+        margin: 80px 0 0 50px;
+    }
+
+    #v1_direita, #v6_esquerda{
+        padding: 0 150px;
+    }
+    
+    .informacao_vagao ul li {
+        height: 60%;
+        font-size: 3em;
+    }
+
+    .janela{
+        width: 25%;
+    }
+
+    #rodape {
+        height: 20%;
+    }
+}
+
+/* 1920x1080 */
+@media screen and (min-width: 1920px) {
+
+    #janela_maquinista{
+        margin: 100px 80px 0 0;
+    }
+
+    #janela_fundo{
+        margin: 100px 0 0 80px;
+    }
+
+    #v1_direita, #v6_esquerda{
+        padding: 0 200px;
+    }
+
+    .informacao_vagao{
+        height: 25%;
+    }
+
+    .informacao_vagao ul li {
+        height: 50%;
+        font-size: 3em;
+    }
+    
+    .porta {
+        height: 75%;
+    }
+}
