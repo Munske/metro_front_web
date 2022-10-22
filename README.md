@@ -9,5 +9,5 @@
     it was used the method of calling inline functions directly in HTML with
     onclick attribute for JavaScript in unordered lists in each car.
 
-    The site also contains responsiveness to the formats, /* 320x480 */ - 
+    The site also contains semantics and responsiveness in the formats: /* 320x480 */ - 
     /* 768x1024 */ - /* 1024x637 */ - /* 1280x720 */ - /* 1920x1080 */
